@@ -1,0 +1,336 @@
+:root {
+    font-size: 10px;
+
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --white: #ffffff;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+/* ===========================
+   Reset
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    overflow-x: hidden;
+}
+
+/* ===========================
+   Vídeo de Fundo
+=========================== */
+
+.caixa-video {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.caixa-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 45%, rgba(10, 12, 16, 0.99) 60%);
+}
+
+/* ===========================
+   Geral
+=========================== */
+
+section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg);
+    border-bottom: var(--border);
+    z-index: 1000;
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 1.5rem 2rem;
+}
+
+.logo img {
+    height: 6rem;
+}
+
+.header nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.header nav a {
+    color: var(--white);
+    font-size: 1.8rem;
+    transition: .3s;
+}
+
+.header nav a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+/* ===========================
+   Home
+=========================== */
+
+.caixa-principal {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.caixa-principal div {
+    max-width: 60rem;
+}
+
+.caixa-principal h3 {
+    color: var(--white);
+    font-size: 6rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.caixa-principal p {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.8;
+    padding: 2rem 0;
+}
+
+/* ===========================
+   Botão
+=========================== */
+
+.botao-link {
+    display: inline-block;
+
+    background: var(--main-color);
+
+    color: var(--white);
+
+    padding: 1.2rem 3rem;
+
+    font-size: 1.8rem;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.botao-link:hover {
+    letter-spacing: .15rem;
+    transform: scale(1.05);
+}
+
+/* ===========================
+   Sobre
+=========================== */
+
+.caixa-sobre h2 {
+    text-align: center;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 4rem;
+    padding-bottom: 3rem;
+}
+
+.caixa-sobre h2 span {
+    color: var(--main-color);
+}
+
+.sobre-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: var(--black);
+}
+
+.sobre-imagem {
+    flex: 1 1 45rem;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    display: block;
+}
+
+.sobre-texto {
+    flex: 1 1 45rem;
+    padding: 3rem;
+}
+
+.sobre-texto h3 {
+    color: var(--white);
+    font-size: 3rem;
+}
+
+.sobre-texto p {
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+/* ===========================
+   Endereço
+=========================== */
+
+.modal {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.modal h3 {
+    color: var(--white);
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.modal h3 span {
+    color: var(--main-color);
+}
+
+.modal iframe {
+    width: 100%;
+    max-width: 900px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+/* ===========================
+   Máscara Modal
+=========================== */
+
+.mascara-modal {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, .6);
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: .4s;
+
+    z-index: 999;
+}
+
+/* Classe para abrir a máscara futuramente com JavaScript */
+.mascara-modal.ativo {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ===========================
+   Responsivo
+=========================== */
+
+@media (max-width: 991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .header section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .caixa-principal {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .caixa-principal h3 {
+        font-size: 5rem;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+    }
+
+    .modal iframe {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .caixa-principal h3 {
+        font-size: 4rem;
+    }
+
+    .caixa-principal p {
+        font-size: 1.8rem;
+    }
+
+    .modal iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .header nav {
+        gap: 1rem;
+    }
+
+    .logo img {
+        height: 5rem;
+    }
+
+    .modal iframe {
+        height: 250px;
+    }
+}

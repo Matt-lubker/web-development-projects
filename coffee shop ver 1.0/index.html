@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Coffee Shop</title>
+</head>
+
+<body>
+
+    <!-- Vídeo de fundo -->
+    <div class="caixa-video">
+        <video autoplay muted loop playsinline>
+            <source src="./Videos/cafe.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+
+        <div class="mascara"></div>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <section>
+
+            <a href="#home" class="logo">
+                <img src="./img/logo.png" alt="Coffee Shop Logo">
+            </a>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#address">Address</a>
+            </nav>
+
+        </section>
+    </header>
+
+    <!-- Página Principal -->
+    <section id="home" class="caixa-principal">
+
+        <div>
+
+            <h3>The Best Coffee in Town</h3>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+
+            <a href="#address" class="botao-link">
+                Order Now
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Sobre -->
+    <section id="about" class="caixa-sobre">
+
+        <h2>
+            <span>About</span> Us
+        </h2>
+
+        <div class="sobre-container">
+
+            <div class="sobre-imagem">
+                <img src="./img/coffe2.jpg" alt="Cup of Coffee">
+            </div>
+
+            <div class="sobre-texto">
+
+                <h3>What Makes Our Coffee Special?</h3>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+
+                <a href="#" class="botao-link">
+                    Learn More
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Endereço -->
+    <section id="address">
+
+        <div class="modal">
+
+            <h3 class="titulo">
+                <span>Our</span> Address
+            </h3>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212677.6206874726!2d-112.47170317287498!3d33.60302570804521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b23272d679d37%3A0x9f14430b838d3b54!2sGlendale%2C%20AZ!5e0!3m2!1sen!2sus!4v1782637553769!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe> 
+
+        </div>
+
+    </section>
+
+    <!-- Máscara do Modal -->
+    <div class="mascara-modal"></div>
+
+</body>
+
+</html>
